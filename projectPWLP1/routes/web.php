@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::resource('articles', ArticleController::class);
-
+Route::get('article/cetak_pdf', [ArticleController::class,'cetak_pdf']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
